@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FirebaseError } from "firebase/app";
-import "./login.css";
+import "./Login.css";
 import { login, register } from "../../services/auth";
 import { useNavigate } from "react-router-dom";
 
