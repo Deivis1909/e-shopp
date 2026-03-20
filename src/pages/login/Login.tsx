@@ -59,6 +59,8 @@ export function LoginPage() {
     <div className="container">
       <div className="login-box">
         <h2>E-Shopp</h2>
+        <h3> Caso seja o primeiro acesso , digite uma senha e email e clique em criar conta</h3>
+        <h4>ou use login: teste@gmail.com / senha 123456 e click em entrar</h4>
 
         {error && <p className="error">{error}</p>}
 
