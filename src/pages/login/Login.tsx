@@ -97,6 +97,7 @@ export function LoginPage() {
         >
           {loading ? "Cadastrando..." : "Criar conta"}
         </button>
+        <h3> by Deivis Moraes 2026 &reg;</h3>
       </div>
     </div>
   );

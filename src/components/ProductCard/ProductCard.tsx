@@ -32,7 +32,7 @@ export function ProductCard({ product, onAddToCart }: Props) {
           <p>R$ {product.price.toFixed(2)}</p>
         </div>
         <button className="product-card__btn" onClick={onAddToCart}>
-          Adicionar ao carrinho
+          ➕
         </button>
       </div>
 

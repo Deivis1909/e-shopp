@@ -32,8 +32,7 @@ export function HomePage() {
     });
   };
 
-  const total = cart.reduce((acc, p) => acc + p.price, 0);
-
+const total = cart.reduce((acc, p) => acc + Number(p.price), 0);
   return (
     <div className="app-container">
       <Navbar cartCount={cart.length} total={total} />
