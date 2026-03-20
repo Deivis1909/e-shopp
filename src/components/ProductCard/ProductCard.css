@@ -1,27 +1,23 @@
-/* Card container */
+/* ================= Product Card ================= */
 .product-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border: 1px solid #ddd;
-  border-radius: 16px; /* cantos mais arredondados */
+  border-radius: 16px;
   padding: 10px;
   width: 220px;
   background-color: #fff;
-
-  /* Sombramento forte */
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Hover no card */
 .product-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.5); /* sombra mais intensa */
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
 }
 
-/* Imagem */
+/* ================= Product Image ================= */
 .product-card__image {
   width: 100%;
   height: 200px;
@@ -36,7 +32,7 @@
   box-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
 
-/* Info */
+/* ================= Product Info ================= */
 .product-card__info {
   text-align: center;
   margin: 10px 0;
@@ -52,7 +48,7 @@
   font-weight: bold;
 }
 
-/* Botão adicionar */
+/* ================= Button ================= */
 .product-card__btn {
   margin-top: auto;
   padding: 10px;
@@ -70,7 +66,7 @@
   transform: translateY(-2px);
 }
 
-/* Modal */
+/* ================= Modal ================= */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -111,4 +107,89 @@
   border: none;
   cursor: pointer;
   color: #222;
+}
+
+/* ================= Responsividade ================= */
+@media (max-width: 1024px) {
+  .product-card {
+    width: 180px;
+  }
+
+  .product-card__image {
+    height: 180px;
+  }
+
+  .product-card__info h3 {
+    font-size: 15px;
+  }
+
+  .product-card__info p {
+    font-size: 14px;
+  }
+
+  .product-card__btn {
+    font-size: 0.95rem;
+    padding: 8px;
+  }
+
+  .modal-content {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    width: 45%; /* dois cards lado a lado no tablet */
+    margin: 10px auto;
+  }
+
+  .product-card__image {
+    height: 160px;
+  }
+
+  .product-card__info h3 {
+    font-size: 14px;
+  }
+
+  .product-card__info p {
+    font-size: 13px;
+  }
+
+  .product-card__btn {
+    font-size: 0.9rem;
+    padding: 7px;
+  }
+
+  .modal-content {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card {
+    width: 100%; /* card ocupa toda largura no celular */
+    margin: 8px 0;
+  }
+
+  .product-card__image {
+    height: 140px;
+  }
+
+  .product-card__info h3 {
+    font-size: 13px;
+  }
+
+  .product-card__info p {
+    font-size: 12px;
+  }
+
+  .product-card__btn {
+    font-size: 0.85rem;
+    padding: 6px;
+  }
+
+  .modal-content {
+    max-width: 95%;
+    padding: 8px;
+  }
 }

@@ -1,12 +1,14 @@
 import './HomePage.css';
 
-import { Navbar } from '../../components/Navbar';
+import  {Navbar}  from '../../components/Navbar';
 import  { ProductCard } from '../../components/ProductCard';
 import type { Product } from '../../components/ProductCard';
 //import  productsData from '../../data/products.json';
 
 import { useState, useEffect } from "react";
 export function HomePage() {
+
+  
   const [products, setProducts] = useState<Product[]>([]);
   const [cart, setCart] = useState<Product[]>([]);
 
@@ -57,7 +59,7 @@ export function HomePage() {
                 <img src={item.image} alt={item.title} />
                 <span>{item.title}</span>
                 <span>R$ {item.price.toFixed(2)}</span>
-                <button onClick={() => removeFromCart(item.id)}>×</button>
+                <button className="cart-item__delete" onClick={() => removeFromCart(item.id)}>×</button>
               </div>
             ))}
           </div>
