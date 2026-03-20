@@ -5,7 +5,7 @@ import  { ProductCard } from '../../components/ProductCard';
 import type { Product } from '../../components/ProductCard';
 //import  productsData from '../../data/products.json';
 
-import { useState, useEffect } from "react";
+import { useState, useEffect,useMemo } from "react";
 export function HomePage() {
 
   
@@ -32,7 +32,9 @@ export function HomePage() {
     });
   };
 
-const total = cart.reduce((acc, p) => acc + Number(p.price), 0);
+const total = useMemo(() => {
+  return cart.reduce((acc, p) => acc + Number(p.price), 0);
+}, [cart]);
   return (
     <div className="app-container">
       <Navbar cartCount={cart.length} total={total} />
