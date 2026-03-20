@@ -33,7 +33,11 @@ export function HomePage() {
   };
 
 const total = useMemo(() => {
-  return cart.reduce((acc, p) => acc + Number(p.price), 0);
+  return cart.reduce((acc, p) => {
+    // substitui vírgula por ponto
+    const price = Number(p.price.toString().replace(',', '.'));
+    return acc + (isNaN(price) ? 0 : price);
+  }, 0);
 }, [cart]);
   return (
     <div className="app-container">
